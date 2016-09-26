@@ -1,0 +1,25 @@
+ion-view
+  ion-content
+    .container
+      .row
+        .col
+          h3 Enter your VIN
+
+      form(name="vinForm" ng-submit="vinEntryCtrl.saveVehicle(vin)" novalidate)
+        .row
+          .input-field.col
+            input.validate(type="text" id="vin" ng-model="vin" required)
+            label(for="vin") *VIN
+            div(ng-messages="vinForm.vin.$error.required")
+              div(ng-message="required") Vin is required                          
+
+        .row(ng-if="processed")
+          .col.s12(ng-class="{'red-text': error, 'green-text': success}") {{ message }}
+
+        .row(ng-if="processing")
+          ion-spinner.spinner-energized(icon="spiral")          
+
+        .row
+          .col.flex-center
+            button.btn.btn-large.green(type="submit") Save
+          

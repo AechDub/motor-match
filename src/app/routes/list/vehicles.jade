@@ -1,0 +1,31 @@
+ion-view
+  ion-content
+    .container
+      .row
+        .col
+          h3 Find your match
+
+      .row
+        .col.s12
+          label.label-header(for="mpg") MPG 
+            strong {{ mpg }}
+          .range
+            span 5
+            input(type="range" name="mpg" ng-model="mpg" min="5" max="50")
+            span 50
+
+      .row(ng-if="processing")
+        ion-spinner.spinner-energized(icon="spiral")
+
+      ion-list(ng-if="!processing")
+        ion-item(ng-if="vehicles.length < 1")
+          .row
+            .col.s12
+              h4 No vehicles available
+        ion-item(ng-repeat="vehicle in vehicles | range:'mpg':mpg")
+          .row
+            .col.s10 
+              h4 {{ vehicle.model_year }} {{ vehicle.make }} {{ vehicle.model }}
+              span {{ (vehicle.price | currency) || "N/A" }}
+            .col.s2.text-right
+              h5 MPG: {{ (vehicle.mpg) || "N/A" }}

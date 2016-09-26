@@ -1,0 +1,42 @@
+
+<ion-view>
+  <ion-content>
+    <div class="container">
+      <div class="row">
+        <div class="col">
+          <h3>Find your match</h3>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col s12">
+          <label for="mpg" class="label-header">MPG <strong>{{ mpg }}</strong></label>
+          <div class="range"><span>5</span>
+            <input type="range" name="mpg" ng-model="mpg" min="5" max="50"/><span>50</span>
+          </div>
+        </div>
+      </div>
+      <div ng-if="processing" class="row">
+        <ion-spinner icon="spiral" class="spinner-energized"></ion-spinner>
+      </div>
+      <ion-list ng-if="!processing">
+        <ion-item ng-if="vehicles.length &lt; 1">
+          <div class="row">
+            <div class="col s12">
+              <h4>No vehicles available</h4>
+            </div>
+          </div>
+        </ion-item>
+        <ion-item ng-repeat="vehicle in vehicles | range:'mpg':mpg">
+          <div class="row">
+            <div class="col s10"> 
+              <h4>{{ vehicle.model_year }} {{ vehicle.make }} {{ vehicle.model }}</h4><span>{{ (vehicle.price | currency) || "N/A" }}</span>
+            </div>
+            <div class="col s2 text-right">
+              <h5>MPG: {{ (vehicle.mpg) || "N/A" }}</h5>
+            </div>
+          </div>
+        </ion-item>
+      </ion-list>
+    </div>
+  </ion-content>
+</ion-view>

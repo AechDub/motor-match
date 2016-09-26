@@ -1,0 +1,44 @@
+label {
+  color: $primary-text-color;
+}
+
+input[type="text"]:focus {
+  border-bottom: 1px solid $accent-color !important;
+  box-shadow: 0 1px 0 0 $accent-color !important;
+
+  + label {
+    color: $accent-color !important;
+  }
+}
+
+.range {
+  span {
+    padding: 0 10px;
+  }
+}  
+
+input[type=range] {
+  border: 0;
+
+  &::-webkit-slider-thumb {
+    background: $accent-color;
+  }
+
+  +.thumb {
+    display: none;
+  }
+
+}
+
+label.label-header {
+  display: block;
+  font-size: 20px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+ion-spinner {
+  display: block;
+  margin: 0 auto;
+  text-align: center;  
+}

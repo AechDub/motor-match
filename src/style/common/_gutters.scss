@@ -1,0 +1,30 @@
+
+$step: 2;
+$loops: 20;
+
+@for $i from 0 through $loops {
+
+  .m#{$i * $step} { margin: ($i * $step) + px !important; }
+  .mt#{$i * $step} { margin-top: ($i * $step) + px !important; }
+  .mb#{$i * $step} { margin-bottom: ($i * $step) + px !important; }
+  .mr#{$i * $step} { margin-right: ($i * $step) + px !important; }
+  .ml#{$i * $step} { margin-left: ($i * $step) + px !important; }
+  .p#{$i * $step} { padding: ($i * $step) + px !important; }
+  .pt#{$i * $step} { padding-top: ($i * $step) + px !important; }
+  .pb#{$i * $step} { padding-bottom: ($i * $step) + px !important; }
+  .pr#{$i * $step} { padding-right: ($i * $step) + px !important; }
+  .pl#{$i * $step} { padding-left: ($i * $step) + px !important; }
+
+  // negative margins used for retracting padding
+
+  .m-#{$i * $step} { margin: -($i * $step) + px; }
+  .mt-#{$i * $step} { margin-top: -($i * $step) + px; }
+  .mb-#{$i * $step} { margin-bottom: -($i * $step) + px; }
+  .mr-#{$i * $step} { margin-right: -($i * $step) + px; }
+  .ml-#{$i * $step} { margin-left: -($i * $step) + px; }
+  .mh-#{$i * $step} {
+    margin-left: -($i * $step) + px;
+    margin-right: -($i * $step) + px;
+  }
+
+}

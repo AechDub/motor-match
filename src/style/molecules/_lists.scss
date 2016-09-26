@@ -1,0 +1,12 @@
+ion-list {
+  .list {
+    @extend .box-shadow;
+  }
+}
+
+
+ion-item {
+  .row {
+    margin-bottom: 0;
+  }
+}

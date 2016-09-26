@@ -1,0 +1,17 @@
+ion-side-menu {
+  ion-item.item {
+    border-color: $primary-color-dark;
+
+    &.current-route {
+      a.item-content {
+        background-color: $primary-color-light;
+        color: $primary-color;
+      }
+    }
+
+    a.item-content {
+      @extend .text-bold;
+      background-color: $primary-color;
+    }
+  }
+}

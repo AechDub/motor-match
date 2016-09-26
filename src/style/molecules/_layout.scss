@@ -1,0 +1,9 @@
+body {
+  background: lighten($divider-color, 20%);
+  color: $primary-text-color;
+}
+
+ion-view > ion-content {
+  @extend .pt20;
+  background: lighten($divider-color, 20%);
+}

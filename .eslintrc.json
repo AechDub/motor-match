@@ -1,0 +1,16 @@
+{
+  "extends": "standard",
+  "plugins": [
+      "standard",
+      "promise"
+  ],
+  "globals": {
+    "angular": true,
+    "cordova": true,
+    "Camera": true,
+    "StatusBar": true,
+    "Image": true,
+    "_": true,
+    "moment": true
+  }
+}
