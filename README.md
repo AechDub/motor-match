@@ -2,7 +2,7 @@
 
 
 ## Information
-Thanks for taking a look at my project!  If you have any questions, of course feel free to reach out.  The app is built using Ionic, AngularJS, SASS, and Jade.  Additionaly, I built a small Mongoose API to support the saving of vehicles for further data analysis.  This small API is hosted on Heroku.  Link to GitHub API project: [API](https://github.com/hutchwhite/motor-match-api)
+Thanks for taking a look at my project!  If you have any questions, of course feel free to reach out.  The app is built using Ionic, AngularJS, SASS, and Jade.  Developed using Javascript Standard Style.  Additionaly, I built a small Mongoose API to support the saving of vehicles for further data analysis.  This small API is hosted on Heroku.  Link to GitHub API project: [API](https://github.com/hutchwhite/motor-match-api)
 
 ---
 
